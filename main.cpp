@@ -17,7 +17,7 @@
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
 #include <ctime>        // calendrier
-#include "calendrier.h" //header pour la déclaration de fonction
+#include "calendrier.hpp" //header pour la déclaration de fonction
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 
@@ -41,7 +41,7 @@ int main() {
       }while(annee < MIN_ANNEE or annee > MAX_ANNEE);
       
       //appel la fonction et effect
-      calendrier(annee);
+      affichageCalendrier(annee);
    
       do{
          cout << "Voulez vous recommencer ? [O/N]: ";
