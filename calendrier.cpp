@@ -1,6 +1,6 @@
 //---------------------------------------------------------
 // Fichier      : calendrier.cpp
-// Auteur       : Edwin Haffner & Hugo Germano
+// Auteur       : Edwin Häffner & Hugo Germano
 // Date         : 02.11.2022
 
 // But          : Programme qui affiche pour une année [1800 – 2100] saisie par l’utilisateur le calendrier complet en tenant compte des années bissextiles. 
