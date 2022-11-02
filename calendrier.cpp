@@ -16,20 +16,43 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
+#include <ctime>       // calendrier
+#include "calendrier.h"
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 
 using namespace std;
+
 int main() {
 
    //déclaration des constantes
-   const int DECIMALES = 2;
+   const int   MIN_ANNEE = 1800, MAX_ANNEE = 2100;
+
+   //déclaration des années
+   int annee;
+   char continuer;
+
+   do{
+      do{
+         cout << "Veuillez entrer une année dans l'intervalle entre [" << MIN_ANNEE << "-"<< MAX_ANNEE << "]: ";
+         cin >> annee;
+         VIDER_BUFFER;
+
+      }while(annee < MIN_ANNEE || annee > MAX_ANNEE);
+      
+
+      
+      do{
+         cout << "Voulez vous recommencer ? [O/N]: ";
+         cin >> continuer;
+         VIDER_BUFFER;
+      }while(continuer != 'N');
+
+   }while(continuer == 'O');
 
 
-   cout << fixed << setprecision(DECIMALES);
-   
-   cout << "Entrez ENTER pour quitter.";
-   VIDER_BUFFER;
-   salut a tous les amis;
    return EXIT_SUCCESS; //retourne un code de succès
+}
+int calendrier(int annee){
+
 }
