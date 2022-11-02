@@ -30,5 +30,6 @@ int main() {
    
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
-   return EXIT_SUCCESS;                                  //retourne un code de succès
+   salut a tous les amis;
+   return EXIT_SUCCESS; //retourne un code de succès
 }
