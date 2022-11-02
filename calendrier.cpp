@@ -5,8 +5,24 @@
 #include <ctime>       // calendrier
 #include "calendrier.hpp"
 
-using namespace std;
+int jourAnnee (int annee) {
 
-void affichageCalendrier(int annee){
-   cout << annee << endl;
+    
+
+}
+
+bool bissextile (int annee){ //Verification si l'année est bissextile !
+
+    bool bissextile = false;
+
+    if (annee % 400 == 0 or (annee % 4 == 0 and annee % 100 != 0)){
+        bissextile = true;
+    }
+
+    return bissextile;
+}
+
+void affichageCalendrier (int anneeUser){
+    jourAnnee(anneeUser);
+    bissextile(anneeUser);
 }
