@@ -38,21 +38,22 @@ int main() {
          cin >> annee;
          VIDER_BUFFER;
 
-      }while(annee < MIN_ANNEE || annee > MAX_ANNEE);
+      }while(annee < MIN_ANNEE or annee > MAX_ANNEE);
       
-
-      
+      //appel la fonction et effect
+      calendrier(annee);
+   
       do{
          cout << "Voulez vous recommencer ? [O/N]: ";
          cin >> continuer;
          VIDER_BUFFER;
-      }while(continuer != 'N');
+      }while(continuer != 'O' and continuer != 'N');
 
    }while(continuer == 'O');
 
 
    return EXIT_SUCCESS; //retourne un code de succès
 }
-int calendrier(int annee){
+void calendrier(int annee){
 
 }

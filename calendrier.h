@@ -1,1 +1,1 @@
-int calendrier(int annee);
+void calendrier(int annee);
