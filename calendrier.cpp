@@ -7,7 +7,7 @@
 
 int jourAnnee (int annee) {
 
-    
+    return annee;
 
 }
 
