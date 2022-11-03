@@ -1,8 +1,5 @@
-#include <cstdlib>      // EXIT_SUCCESS
 #include <iostream>     // cout et cin
 #include <iomanip>
-#include <limits>       // numeric_limits<streamsize>
-#include <ctime>       // calendrier
 #include "calendrier.hpp"
 
 using namespace::std;
@@ -46,7 +43,7 @@ int affichageJours(int nombreJour, int jourDepart){
     return jourSemaine;
 }
 int affichageMois(int mois, int jourDepart, bool bissextile){
-    int finJour;
+
     if(mois == 2){
         if(bissextile){
             return affichageJours(29, jourDepart);
@@ -104,6 +101,6 @@ void affichageCalendrier (int anneeUser){
     jourDepart = affichageMois(mois++, jourDepart, biss);
 
     cout << "Décembre " << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+    affichageMois(mois, jourDepart, biss);
 
 }
