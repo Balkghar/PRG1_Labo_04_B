@@ -5,9 +5,13 @@
 #include <ctime>       // calendrier
 #include "calendrier.hpp"
 
-int jourAnnee (int annee) {
+//Source : https://www.codespeedy.com/how-to-find-day-from-date-in-cpp/
+int premierJourAnnee (int annee) {
 
-    return annee;
+
+    annee -= 1;
+    return ((annee + annee/4 - annee/100 + annee/400 ) % 7) + 1;
+
 
 }
 
@@ -23,6 +27,6 @@ bool bissextile (int annee){ //Verification si l'année est bissextile !
 }
 
 void affichageCalendrier (int anneeUser){
-    jourAnnee(anneeUser);
+    std::cout << premierJourAnnee(anneeUser) << std::endl;
     bissextile(anneeUser);
 }
