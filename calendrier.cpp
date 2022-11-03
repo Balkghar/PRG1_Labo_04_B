@@ -25,11 +25,16 @@ bool bissextile (int annee){ //Verification si l'année est bissextile !
 }
 int affichageJours(int nombreJour, int jourDepart){
     const int ESPACE = 3;
-    cout << setw(ESPACE) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) << "J" << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
+    cout << setw(ESPACE - 1) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) <<
+    "J" << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
     int jourSemaine = jourDepart;
     int largeur = jourSemaine*ESPACE;
     for(int i = 1 ; i <= nombreJour; ++i){
-        cout << setw(largeur) << i;
+        if (jourSemaine == 1 or i == 1){
+            cout << setw(largeur-1) << i;
+        } else {
+            cout << setw(largeur) << i;
+        }
         if(jourSemaine % 7 == 0){
             jourSemaine = 1;
             cout << endl;
