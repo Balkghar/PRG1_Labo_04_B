@@ -8,8 +8,10 @@
 //Source : https://www.codespeedy.com/how-to-find-day-from-date-in-cpp/
 int premierJourAnnee (int annee) {
 
+
     annee -= 1;
     return ((annee + annee/4 - annee/100 + annee/400 ) % 7) + 1;
+
 
 }
 
