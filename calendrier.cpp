@@ -5,11 +5,13 @@
 #include <ctime>       // calendrier
 #include "calendrier.hpp"
 
-using namespace std;
 
-int jourAnnee (int annee) {
+//Source : https://www.codespeedy.com/how-to-find-day-from-date-in-cpp/
+int premierJourAnnee (int annee) {
 
-    return 1;
+
+    annee -= 1;
+    return ((annee + annee/4 - annee/100 + annee/400 ) % 7) + 1;
 
 }
 
@@ -102,4 +104,5 @@ void affichageCalendrier (int anneeUser){
 
     cout << "Décembre " << anneeUser << endl;
     jourDepart = affichageMois(mois++, jourDepart, biss);
+
 }
