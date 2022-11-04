@@ -1,5 +1,5 @@
 //---------------------------------------------------------
-// Fichier      : main.cpp
+// Fichier      : calendrier.cpp
 // Auteur       : Edwin Häffner & Hugo Germano
 // Date         : 02.11.2022
 

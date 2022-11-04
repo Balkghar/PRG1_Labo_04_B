@@ -38,7 +38,7 @@ int main() {
 
       }while(annee < MIN_ANNEE or annee > MAX_ANNEE);
       
-      //appel la fonction et effect
+      //appel la fonction qui affiche le calendrier
       affichageCalendrier(annee);
    
       do{
