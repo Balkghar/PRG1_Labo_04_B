@@ -67,7 +67,8 @@ int affichageJours(int nombreJour, int jourDepart){
     const int ESPACE = 3, PREMIER_ESPACE = 2;
 
     //affichage des jours de la semaine
-    cout << setw(PREMIER_ESPACE) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) << "J" << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
+    cout << setw(PREMIER_ESPACE) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) << "J" 
+    << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
     
     // déclaration des variables
     int jourSemaine = jourDepart;
