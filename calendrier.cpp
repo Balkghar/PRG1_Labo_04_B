@@ -1,3 +1,17 @@
+//---------------------------------------------------------
+// Fichier      : main.cpp
+// Auteur       : Edwin Häffner & Hugo Germano
+// Date         : 02.11.2022
+
+// But          : Fonction affichant le calendrier d'une année donnée
+//
+// Remarque     : 
+//
+// Modifs       :
+//
+// Compilateur  : gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+//---------------------------------------------------------
+
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include "calendrier.hpp"
@@ -48,26 +62,40 @@ bool bissextile (int annee){ //Verification si l'année est bissextile !
 // return      premier jour de semaine de l'année suivante
 // exception   n/a
 int affichageJours(int nombreJour, int jourDepart){
+
+    //espace entre les dates
     const int ESPACE = 3;
+
+    //affichage des jours de la semaine
     cout << setw(ESPACE - 1) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) << "J" << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
+    
+    // déclaration des variables
     int jourSemaine = jourDepart;
     int largeur = jourSemaine*ESPACE;
+    //affiche les date du mois
     for(int i = 1 ; i <= nombreJour; ++i){
+        // si jour de semaine lundi, enlève un espace pour que ce soit colé à gauche
         if (jourSemaine == 1 or i == 1){
             cout << setw(largeur-1) << i;
-        } else {
+        } 
+        //autrement, affiche selon la largeur 
+        else {
             cout << setw(largeur) << i;
         }
-        if(jourSemaine % 7 == 0){
+        // si le jour de la semaine est dimanche, le remet à lundi
+        if(jourSemaine == 7 ){
             jourSemaine = 1;
             cout << endl;
         }
+        //incrémente le jour de semaine
         else{
             jourSemaine++;
         }
+        //met la largeur à la valeur d'espace
         largeur = ESPACE;
     }
     cout << endl << endl;
+    //return le jour de la semaine
     return jourSemaine;
 }
 
@@ -81,7 +109,9 @@ int affichageJours(int nombreJour, int jourDepart){
 // exception   n/a
 int affichageMois(int mois, int jourDepart, bool bissextile){
 
+    //si c'est février
     if(mois == 2){
+        //bissextile ou non
         if(bissextile){
             return affichageJours(29, jourDepart);
         }
@@ -89,6 +119,7 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
             return affichageJours(28, jourDepart);
         }
     }
+    //si c'est un mois à 30 jours autrement, 31 jours
     else if(mois == 4 || mois == 6 || mois==9 || mois == 11){
         return affichageJours(30, jourDepart);
     }
@@ -105,10 +136,12 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
 // exception   n/a
 void affichageCalendrier (int anneeUser){
 
+    //déclaration des variables
     int mois = 1;
     int jourDepart = premierJourAnnee(anneeUser);
     bool biss = bissextile(anneeUser);
 
+    //affichage de tous les mois de l'année
     cout << "Janvier " << anneeUser << endl;
     jourDepart = affichageMois(mois++, jourDepart, biss);
 

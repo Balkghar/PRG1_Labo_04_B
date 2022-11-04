@@ -1,11 +1,15 @@
 //---------------------------------------------------------
-// Demo           : 04_librairie
-// Fichier        : calendrier.h
-// Version        : 02 - 2020-09-18
-// Auteur(s)      : Hugo Germano
-// But            : 
-// Modifications  :
-// Remarque(s)    : NILL
+// Fichier      : calendrier.hpp
+// Auteur       : Edwin Häffner & Hugo Germano
+// Date         : 02.11.2022
+
+// But          : 
+//
+// Remarque     : 
+//
+// Modifs       :
+//
+// Compilateur  : gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 //---------------------------------------------------------
 
 #ifndef calendrier
