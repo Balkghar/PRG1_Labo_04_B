@@ -15,7 +15,7 @@
 #ifndef calendrier
 
    #define calendrier
-   // un sous-programme
+   // Le sous programme qui gère tout l'affichage du calendrier
    void affichageCalendrier(int annee);
 
 #endif
