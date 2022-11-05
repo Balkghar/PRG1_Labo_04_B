@@ -140,41 +140,94 @@ void affichageCalendrier (int anneeUser){
     bool biss = bissextile(anneeUser);
 
 
+    //Affichage du calendrier
 
-    //Affichage de tous les mois de l'année
-    cout << "Janvier "  << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+    string moisString;
 
-    cout << "Février "  << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+    for (int i = 1; i <= 12; i++){
 
-    cout << "Mars "     << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+        //Affichage du mois
 
-    cout << "Avril "    << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+        switch (i){
+            case 1:
+                moisString = "Janvier "     ;
+                break;
+            case 2:
+                moisString = "Février "     ;
+                break;
+            case 3:
+                moisString = "Mars "        ;
+                break;
+            case 4:
+                moisString = "Avril "       ;
+                break;
+            case 5:
+                moisString = "Mai "         ;
+                break;
+            case 6:
+                moisString = "Juin "        ;
+                break;
+            case 7:
+                moisString = "Juillet "     ;
+                break;
+            case 8:
+                moisString = "Aout "        ;
+                break;
+            case 9:
+                moisString = "Septembre "   ;
+                break;
+            case 10:
+                moisString = "Octobre "     ;
+                break;
+            case 11:
+                moisString = "Novembre "    ;
+                break;
+            case 12:
+                moisString = "Décembre "    ;
+                break;
+        }
 
-    cout << "Mai "      << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+        cout << moisString << anneeUser << endl;
 
-    cout << "Juin "     << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+        //Affiche les jours du mois
+        jourDepart = affichageMois(mois++, jourDepart, biss);
 
-    cout << "Juillet "  << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
+    }
 
-    cout << "Août "     << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
-
-    cout << "Septembre "<< anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
-
-    cout << "Octobre "  << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
-
-    cout << "Novembre " << anneeUser << endl;
-    jourDepart = affichageMois(mois++, jourDepart, biss);
-
-    cout << "Décembre " << anneeUser << endl;
-    affichageMois(mois, jourDepart, biss);
+//    //Affichage de tous les mois de l'année
+//    cout << "Janvier "  << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Février "  << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Mars "     << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Avril "    << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Mai "      << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Juin "     << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Juillet "  << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Août "     << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Septembre "<< anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Octobre "  << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Novembre " << anneeUser << endl;
+//    jourDepart = affichageMois(mois++, jourDepart, biss);
+//
+//    cout << "Décembre " << anneeUser << endl;
+//    affichageMois(mois, jourDepart, biss);
 }
