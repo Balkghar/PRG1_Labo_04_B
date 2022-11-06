@@ -129,46 +129,47 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
 //             
 // Param       mois  le mois appelé
 // Exception   n/a
-string quelMois(int mois){
-    switch (mois){
+string quelMois(int numMois){
+    string mois;
+    switch (numMois){
             case 1:
-                return "Janvier "     ;
+                mois = "Janvier "     ;
                 break;
             case 2:
-                return "Février "     ;
+                mois = "Février "     ;
                 break;
             case 3:
-                return "Mars "        ;
+                mois ="Mars "        ;
                 break;
             case 4:
-                return "Avril "       ;
+                mois = "Avril "       ;
                 break;
             case 5:
-                return "Mai "         ;
+                mois = "Mai "         ;
                 break;
             case 6:
-                return "Juin "        ;
+                mois = "Juin "        ;
                 break;
             case 7:
-                return "Juillet "     ;
+                mois = "Juillet "     ;
                 break;
             case 8:
-                return "Août "        ;
+                mois = "Août "        ;
                 break;
             case 9:
-                return "Septembre "   ;
+                mois = "Septembre "   ;
                 break;
             case 10:
-                return "Octobre "     ;
+                mois = "Octobre "     ;
                 break;
             case 11:
-                return "Novembre "    ;
+                mois = "Novembre "    ;
                 break;
             case 12:
-                return "Décembre "    ;
+                mois = "Décembre "    ;
                 break;
-        }
-        return "erreur";
+    }
+    return mois;
 }
 
 // Nom         affichageCalendrier
