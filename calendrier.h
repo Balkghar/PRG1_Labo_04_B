@@ -1,5 +1,5 @@
 //---------------------------------------------------------
-// Fichier      : calendrier.hpp
+// Fichier      : calendrier.h
 // Auteur       : Edwin Häffner & Hugo Germano
 // Date         : 02.11.2022
 

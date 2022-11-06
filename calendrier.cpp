@@ -14,7 +14,7 @@
 
 #include <iostream>         // cout et cin
 #include <iomanip>          // setw
-#include "calendrier.hpp"   //header pour la déclaration de fonction
+#include "calendrier.h"   //header pour la déclaration de fonction
 
 using namespace std;
 

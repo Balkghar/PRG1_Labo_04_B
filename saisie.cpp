@@ -15,7 +15,7 @@
 
 #include <iostream>     // cout et cin
 #include <limits>       // numeric_limits<streamsize>
-#include "calendrier.hpp" //header pour la déclaration de fonction
+#include "calendrier.h" //header pour la déclaration de fonction
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n') //Macro pour vider le buffer
 
