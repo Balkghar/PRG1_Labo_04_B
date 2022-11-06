@@ -28,7 +28,7 @@ using namespace std;
 // Param       minInt  le minimum autorisé
 // Param       message message d'invitation de saisie
 // Exception   n/a
-int saisie(int maxInt, int minInt, string message){
+int saisie(int maxInt, int minInt, const string& message){
    int saisie;
    do{
          cout << message;
@@ -46,7 +46,7 @@ int saisie(int maxInt, int minInt, string message){
 // Param       non  le char non
 // Param       message  message d'invitation de saisie
 // Exception   n/a
-bool saisie(char oui, char non, string message){
+bool saisie(char oui, char non, const string& message){
       char continuer;
       do{
             cout << message;

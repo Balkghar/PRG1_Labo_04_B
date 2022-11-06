@@ -15,10 +15,7 @@
 
 #include <cstdlib>      // EXIT_SUCCESS
 #include <iostream>     // cout et cin
-#include <limits>       // numeric_limits<streamsize>
 #include "calendrier.hpp" //header pour la déclaration de fonction
-
-#define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n') //Macro pour vider le buffer
 
 using namespace std;
 
@@ -32,7 +29,7 @@ int main() {
 
    //Déclaration des années
    int annee;
-   bool continuer =true;
+   bool continuer;
 
 
    //Boucle pour repeter le programme si l'utilisateur le souhaite
