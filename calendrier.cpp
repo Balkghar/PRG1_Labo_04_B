@@ -132,27 +132,27 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
 string quelMois(int mois){
     switch (mois){
             case 1:
-                mois = "Janvier "     ;
+                return "Janvier "     ;
             case 2:
-                mois = "Février "     ;
+                return "Février "     ;
             case 3:
-                mois ="Mars "        ;
+                return "Mars "        ;
             case 4:
-                mois = "Avril "       ;
+                return "Avril "       ;
             case 5:
-                mois = "Mai "         ;
+                return "Mai "         ;
             case 6:
-                mois = "Juin "        ;
+                return "Juin "        ;
             case 7:
-                mois = "Juillet "     ;
+                return "Juillet "     ;
             case 8:
-                mois = "Août "        ;
+                return "Août "        ;
             case 9:
-                mois = "Septembre "   ;
+                return "Septembre "   ;
             case 10:
-                mois = "Octobre "     ;
+                return "Octobre "     ;
             case 11:
-                mois = "Novembre "    ;
+                return "Novembre "    ;
             case 12:
                 return "Décembre "    ;
             default:
