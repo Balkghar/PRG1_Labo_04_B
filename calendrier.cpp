@@ -38,7 +38,6 @@ int premierJourAnnee (int annee) {
 // Param       annee : l'année dont on veut savoir si elle est bissextile
 // Return      bool : vrai si l'année est bissextile
 // Exception   n/a
-
 bool bissextile (int annee){ //Verification si l'année est bissextile !
 
     bool bissextile = false; //Initialisation de la variable en false
@@ -57,7 +56,6 @@ bool bissextile (int annee){ //Verification si l'année est bissextile !
 // Param       jourDepart  le jour de la semaine dont le mois commence
 // Return      int : Premier jour de semaine de l'année suivante
 // Exception   n/a
-
 int affichageJours(int nombreJour, int jourDepart){
 
     //Espace entre les dates
@@ -105,7 +103,6 @@ int affichageJours(int nombreJour, int jourDepart){
 // Param       bissextile si l'année est bissextile
 // Return      le premier de semaine du mois suivant
 // Exception   n/a
-
 int affichageMois(int mois, int jourDepart, bool bissextile){
 
     //Si le mois est février
@@ -127,6 +124,52 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
     }
 }
 
+// Nom         quelMois
+// But         retourne le string du mois demandé
+//             
+// Param       mois  le mois appelé
+// Exception   n/a
+string quelMois(int mois){
+    switch (mois){
+            case 1:
+                return "Janvier "     ;
+                break;
+            case 2:
+                return "Février "     ;
+                break;
+            case 3:
+                return "Mars "        ;
+                break;
+            case 4:
+                return "Avril "       ;
+                break;
+            case 5:
+                return "Mai "         ;
+                break;
+            case 6:
+                return "Juin "        ;
+                break;
+            case 7:
+                return "Juillet "     ;
+                break;
+            case 8:
+                return "Août "        ;
+                break;
+            case 9:
+                return "Septembre "   ;
+                break;
+            case 10:
+                return "Octobre "     ;
+                break;
+            case 11:
+                return "Novembre "    ;
+                break;
+            case 12:
+                return "Décembre "    ;
+                break;
+        }
+}
+
 // Nom         affichageCalendrier
 // But         Afficher tous les mois d'une année donnée
 //             
@@ -135,7 +178,6 @@ int affichageMois(int mois, int jourDepart, bool bissextile){
 void affichageCalendrier (int anneeUser){
 
     //Déclaration des variables
-    int mois = 1;
     int jourDepart = premierJourAnnee(anneeUser);
     bool biss = bissextile(anneeUser);
 
@@ -147,87 +189,12 @@ void affichageCalendrier (int anneeUser){
     for (int i = 1; i <= 12; i++){
 
         //Affichage du mois
-
-        switch (i){
-            case 1:
-                moisString = "Janvier "     ;
-                break;
-            case 2:
-                moisString = "Février "     ;
-                break;
-            case 3:
-                moisString = "Mars "        ;
-                break;
-            case 4:
-                moisString = "Avril "       ;
-                break;
-            case 5:
-                moisString = "Mai "         ;
-                break;
-            case 6:
-                moisString = "Juin "        ;
-                break;
-            case 7:
-                moisString = "Juillet "     ;
-                break;
-            case 8:
-                moisString = "Aout "        ;
-                break;
-            case 9:
-                moisString = "Septembre "   ;
-                break;
-            case 10:
-                moisString = "Octobre "     ;
-                break;
-            case 11:
-                moisString = "Novembre "    ;
-                break;
-            case 12:
-                moisString = "Décembre "    ;
-                break;
-        }
-
+        moisString = quelMois(i);
+        
         cout << moisString << anneeUser << endl;
 
         //Affiche les jours du mois
-        jourDepart = affichageMois(mois++, jourDepart, biss);
+        jourDepart = affichageMois(i, jourDepart, biss);
 
     }
-
-//    //Affichage de tous les mois de l'année
-//    cout << "Janvier "  << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Février "  << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Mars "     << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Avril "    << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Mai "      << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Juin "     << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Juillet "  << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Août "     << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Septembre "<< anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Octobre "  << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Novembre " << anneeUser << endl;
-//    jourDepart = affichageMois(mois++, jourDepart, biss);
-//
-//    cout << "Décembre " << anneeUser << endl;
-//    affichageMois(mois, jourDepart, biss);
 }

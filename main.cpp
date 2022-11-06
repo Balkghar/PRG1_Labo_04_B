@@ -26,32 +26,24 @@ int main() {
 
    //Déclaration des constantes
    const int   MIN_ANNEE = 1800, MAX_ANNEE = 2100;
+   const char OUI = 'O', NON = 'N';
+   const string DEMANDE_ANNEE = "Veuillez entrer une année dans l'intervalle entre [" + to_string(MIN_ANNEE) + "-"+ to_string(MAX_ANNEE) +"]: ";
+   const string RECOMMENCER = "Voulez vous recommencer ? [O/N]: ";
 
    //Déclaration des années
    int annee;
-   char continuer;
+   bool continuer =true;
 
-    //Boucle pour repeter le programme si l'utilisateur le souhaite
+
+   //Boucle pour repeter le programme si l'utilisateur le souhaite
    do{
-       //Saisie de l'année
-      do{
-         cout << "Veuillez entrer une année dans l'intervalle entre [" << MIN_ANNEE << "-"<< MAX_ANNEE << "]: ";
-         cin >> annee;
-         VIDER_BUFFER;
-
-      }while(annee < MIN_ANNEE or annee > MAX_ANNEE);
-      
+      //saisie de l'utilisateur pour l'année
+      annee = saisie(MAX_ANNEE, MIN_ANNEE, DEMANDE_ANNEE);
       //Appel la fonction qui affiche le calendrier
       affichageCalendrier(annee);
-
-      //Demande à l'utilisateur si il veut continuer
-      do{
-         cout << "Voulez vous recommencer ? [O/N]: ";
-         cin >> continuer;
-         VIDER_BUFFER;
-      }while(continuer != 'O' and continuer != 'N');
-
-   }while(continuer == 'O');
+      //saisie si l'utilisateur veut contiuner
+      continuer = saisie(OUI,NON,RECOMMENCER);
+   }while(continuer);
 
 
    return EXIT_SUCCESS; //Retourne un code de succès et quitte le programme
