@@ -49,8 +49,6 @@ int saisie(int maxInt, int minInt, string message){
 bool saisie(char oui, char non, string message){
       char continuer;
       do{
-
-            cout <<"patate";
             cout << message;
             cin >> continuer;
             VIDER_BUFFER;
