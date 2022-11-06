@@ -168,8 +168,8 @@ string quelMois(int mois){
 void affichageCalendrier (int anneeUser){
 
     //Déclaration des variables
-    int jourDepart = premierJourAnnee(anneeUser);
-    bool biss = bissextile(anneeUser);
+    int  jourDepart = premierJourAnnee(anneeUser);
+    bool             biss = bissextile(anneeUser);
 
 
     //Affichage du calendrier

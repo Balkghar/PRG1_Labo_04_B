@@ -32,7 +32,7 @@ int saisie(int maxInt, int minInt, const string& message){
    int saisie;
    do{
          cout << message;
-         cin >> saisie;
+         cin  >>  saisie;
          VIDER_BUFFER;
 
    }while(saisie < minInt or saisie > maxInt);
@@ -49,8 +49,8 @@ int saisie(int maxInt, int minInt, const string& message){
 bool saisie(char oui, char non, const string& message){
       char continuer;
       do{
-            cout << message;
-            cin >> continuer;
+            cout <<   message;
+            cin  >> continuer;
             VIDER_BUFFER;
       }while(continuer != oui and continuer != non);
 

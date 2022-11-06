@@ -20,7 +20,7 @@
    void affichageCalendrier(int annee);
 
    //fonction de saisie
-   int saisie(int maxInt, int minInt, const std::string& message);
+   int  saisie(int maxInt, int minInt, const std::string& message);
    bool saisie(char oui, char non, const std::string& message);
 
 #endif

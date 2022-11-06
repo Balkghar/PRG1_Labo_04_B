@@ -22,20 +22,21 @@ using namespace std;
 int main() {
 
    //Déclaration des constantes
-   const int   MIN_ANNEE = 1800, MAX_ANNEE = 2100;
-   const char OUI = 'O', NON = 'N';
-   const string DEMANDE_ANNEE = "Veuillez entrer une année dans l'intervalle entre [" + to_string(MIN_ANNEE) + "-"+ to_string(MAX_ANNEE) +"]: ";
-   const string RECOMMENCER = "Voulez vous recommencer ? [O/N]: ";
+   const int    MIN_ANNEE = 1800, MAX_ANNEE = 2100;
+   const char   OUI = 'O', NON  = 'N';
+   const string DEMANDE_ANNEE   = "Veuillez entrer une année dans l'intervalle entre [" +
+                                  to_string(MIN_ANNEE) + "-"+ to_string(MAX_ANNEE) +"]: ";
+   const string RECOMMENCER     = "Voulez vous recommencer ? [O/N]: ";
 
    //Déclaration des années
-   int annee;
+   int      annee;
    bool continuer;
 
 
    //Boucle pour repeter le programme si l'utilisateur le souhaite
    do{
       //saisie de l'utilisateur pour l'année
-      annee = saisie(MAX_ANNEE, MIN_ANNEE, DEMANDE_ANNEE);
+      annee     = saisie(MAX_ANNEE, MIN_ANNEE, DEMANDE_ANNEE);
       //Appel la fonction qui affiche le calendrier
       affichageCalendrier(annee);
       //saisie si l'utilisateur veut contiuner
