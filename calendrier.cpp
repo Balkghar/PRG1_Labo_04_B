@@ -168,6 +168,7 @@ string quelMois(int mois){
                 return "Décembre "    ;
                 break;
         }
+        return "erreur";
 }
 
 // Nom         affichageCalendrier
