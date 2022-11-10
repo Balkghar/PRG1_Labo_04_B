@@ -1,5 +1,5 @@
 //---------------------------------------------------------
-// Fichier      : calendrier.h
+// Fichier      : saisie.h
 // Auteur       : Edwin Häffner & Hugo Germano
 // Date         : 02.11.2022
 
@@ -13,10 +13,11 @@
 //---------------------------------------------------------
 #include <iostream>         //string
 
-#ifndef calendrier
+#ifndef saisie
 
-   #define calendrier
-   // Le sous programme qui gère tout l'affichage du calendrier
-   void affichageCalendrier(int annee);
+   #define saisie
+
+   int  saisir(int maxInt, int minInt, const std::string& message);
+   bool repondOui(char oui, char non, const std::string& message);
 
 #endif

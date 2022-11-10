@@ -15,7 +15,7 @@
 
 #include <iostream>     // cout et cin
 #include <limits>       // numeric_limits<streamsize>
-#include "calendrier.h" //header pour la déclaration de fonction
+#include "saisie.h" //header pour la déclaration de fonction
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n') //Macro pour vider le buffer
 
@@ -28,15 +28,15 @@ using namespace std;
 // Param       minInt  le minimum autorisé
 // Param       message message d'invitation de saisie
 // Exception   n/a
-int saisie(int maxInt, int minInt, const string& message){
-   int saisie;
+int saisir(int maxInt, int minInt, const string& message){
+   int saisieUtilisateur;
    do{
          cout << message;
-         cin  >>  saisie;
+         cin  >>  saisieUtilisateur;
          VIDER_BUFFER;
 
-   }while(saisie < minInt or saisie > maxInt);
-   return saisie;
+   }while(saisieUtilisateur < minInt or saisieUtilisateur > maxInt);
+   return saisieUtilisateur;
 }
 
 // Nom         saisie
@@ -46,7 +46,7 @@ int saisie(int maxInt, int minInt, const string& message){
 // Param       non  le char non
 // Param       message  message d'invitation de saisie
 // Exception   n/a
-bool saisie(char oui, char non, const string& message){
+bool repondOui(char oui, char non, const string& message){
       char continuer;
       do{
             cout <<   message;

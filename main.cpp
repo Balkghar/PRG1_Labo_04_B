@@ -16,6 +16,7 @@
 #include <cstdlib>      // EXIT_SUCCESS
 #include <iostream>     // cout et cin
 #include "calendrier.h" //header pour la déclaration de fonction
+#include "saisie.h" //header pour la déclaration de fonction
 
 using namespace std;
 
@@ -28,20 +29,15 @@ int main() {
                                   to_string(MIN_ANNEE) + "-"+ to_string(MAX_ANNEE) +"]: ";
    const string RECOMMENCER     = "Voulez vous recommencer ? [O/N]: ";
 
-   //Déclaration des années
-   int      annee;
-   bool continuer;
-
 
    //Boucle pour repeter le programme si l'utilisateur le souhaite
    do{
-      //saisie de l'utilisateur pour l'année
-      annee     = saisie(MAX_ANNEE, MIN_ANNEE, DEMANDE_ANNEE);
-      //Appel la fonction qui affiche le calendrier
-      affichageCalendrier(annee);
-      //saisie si l'utilisateur veut contiuner
-      continuer = saisie(OUI,NON,RECOMMENCER);
-   }while(continuer);
+
+      const int ANNEE = saisir(MAX_ANNEE, MIN_ANNEE, DEMANDE_ANNEE);
+
+      affichageCalendrier(ANNEE);
+
+   }while(repondOui(OUI,NON,RECOMMENCER));
 
 
    return EXIT_SUCCESS; //Retourne un code de succès et quitte le programme
