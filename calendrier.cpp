@@ -58,35 +58,33 @@ bool bissextile (int annee){ //Verification si l'année est bissextile !
 // Exception   n/a
 int affichageJours(int nombreJour, int jourDepart){
 
-    //Espace entre les dates
-    const int ESPACE = 3, PREMIER_ESPACE = 2;
+    const int ESPACE = 3;
+    const int PREMIER_ESPACE = 2;
+
+    int jourSemaine =   jourDepart;
+    int largeur     =   jourSemaine*ESPACE;
 
     //Affichage des jours de la semaine
     cout << setw(PREMIER_ESPACE) << "L" << setw(ESPACE) << "M" << setw(ESPACE) << "M" << setw(ESPACE) << "J" 
     << setw(ESPACE) << "V" << setw(ESPACE) << "S" << setw(ESPACE) << "D" << endl;
-    
-    //Déclaration des variables
-    int jourSemaine =           jourDepart;
-    int largeur     =   jourSemaine*ESPACE;
+
     //Affiche les date du mois
     for(int i = 1 ; i <= nombreJour; ++i){
         //Si le jour est un Lundi, on enlève un espace pour que ce soit bien aligné
         if (jourSemaine == 1 or i == 1){
             cout << setw(largeur-1) << i;
-        } 
-        //Autrement, affiche selon la largeur définie
-        else {
+        } else {
             cout << setw(largeur)   << i;
         }
+
         //Si le jour est un Dimanche, on le remet à Lundi
-        if(jourSemaine == 7 ){
+        if (jourSemaine == 7) {
             jourSemaine = 1;
             cout    << endl;
-        }
-        //Incrémente le jour de semaine
-        else{
+        } else {
             jourSemaine++;
         }
+
         //Met la largeur à la valeur d'espace
         largeur = ESPACE;
     }
@@ -103,23 +101,21 @@ int affichageJours(int nombreJour, int jourDepart){
 // Param       bissextile si l'année est bissextile
 // Return      le premier de semaine du mois suivant
 // Exception   n/a
-int affichageMois(int mois, int jourDepart, bool bissextile){
+int affichageMois(int mois, int jourDepart, bool bissextile) {
 
     //Si le mois est février
-    if(mois == 2){
+    if (mois == 2) {
         //On vérifie si l'année est bissextile grace à la fonction
-        if(bissextile){
+        if (bissextile) {
             return affichageJours(29, jourDepart);
-        }
-        else{
+        } else {
             return affichageJours(28, jourDepart);
         }
     }
     //Donne si le mois contient 30 ou 31 jours
-    else if(mois == 4 || mois == 6 || mois==9 || mois == 11){
+    else if (mois == 4 || mois == 6 || mois==9 || mois == 11) {
         return affichageJours(30, jourDepart);
-    }
-    else{
+    } else {
         return affichageJours(31, jourDepart);
     }
 }
